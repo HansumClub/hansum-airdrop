@@ -1,0 +1,72 @@
+:root {
+  --hansum-animation-size: 1px;
+}
+.image-overlay {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99%;
+  height: 99%;
+  margin: 1vh;
+  background-image: url("../images/mascot.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  /* filter: saturate(0%) contrast(1000%); */
+  mix-blend-mode: screen;
+  opacity: 1;
+}
+
+@keyframes LtrAnimation {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(-250px);
+  }
+}
+
+@keyframes RtlAnimation {
+  from {
+    transform: translateX(-250px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.line-animated-ltr {
+  animation: LtrAnimation 5s ease-in-out infinite;
+}
+
+.line-animated-rtl {
+  animation: RtlAnimation 5s ease-in-out infinite;
+}
+
+.text {
+  transition: all 1s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  font-family: Chicago, sans-serif;
+  font-size: 7px;
+  white-space: nowrap;
+  color: gray;
+  /*             background-image: repeating-linear-gradient(0deg, black, black);
+             */
+  background-size: cover;
+  /* background-blend-mode: overlay; */
+}
+
+.text div {
+  margin: 0;
+  padding: 0;
+  line-height: 0.8em;
+}

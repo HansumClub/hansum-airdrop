@@ -1,0 +1,8 @@
+node_modules/
+.cache/
+public
+yarn-error.log
+.DS_Store
+csv
+csv2
+docs
