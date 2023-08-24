@@ -40,12 +40,12 @@ const IndexPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
-        <meta property="og:image" content="https://hansum.club/og-image.png" />
+        <meta property="og:image" content="https://hansum.club/og-image.jpg" />
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content="https://hansum.club/og-image.png" />
+        <meta name="twitter:image" content="https://hansum.club/og-image.jpg" />
 
         <meta name="twitter:creator" content="@hansumtoken" />
         <meta name="twitter:site" content="@hansumtoken" />
