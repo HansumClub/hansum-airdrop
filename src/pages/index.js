@@ -2,7 +2,6 @@ import * as React from "react";
 import { Container, Grid, Link, Typography } from "@mui/material";
 import Layout from "../layout";
 import Airdrop from "../components/Airdrop";
-import BackgroundImage from "../images/background.png";
 import { StaticImage } from "gatsby-plugin-image";
 import { Helmet } from "react-helmet";
 
@@ -27,10 +26,32 @@ const styles = {
   },
 };
 
+const meta = {
+  title: "Claim Airdrop | HANSUM",
+  description: `Join Cosmos' most Elite, Exclusive, and Elusive club. Hansum is about savoring life, and looking great while you do it.`,
+};
+
 const IndexPage = () => {
   return (
     <main style={styles.background}>
-      <Helmet title="HANSUM Airdrop" defer={false} />
+      <Helmet title={meta.title} defer={false}>
+        {/* OpenGraph tags */}
+        <meta property="og:url" content="https://hansum.club/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content="https://hansum.club/og-image.png" />
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content="https://hansum.club/og-image.png" />
+
+        <meta name="twitter:creator" content="@hansumtoken" />
+        <meta name="twitter:site" content="@hansumtoken" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <StaticImage
         height={230}
         alt="Literally Ken"
