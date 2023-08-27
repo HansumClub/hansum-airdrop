@@ -72,6 +72,7 @@ const HansumDisclaimer = () => {
 
   return (
     <Modal
+      disablePortal
       open={open}
       onClose={() => {}}
       aria-labelledby="modal-modal-title"
