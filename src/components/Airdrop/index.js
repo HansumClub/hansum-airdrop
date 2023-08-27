@@ -352,7 +352,7 @@ const Airdrop = () => {
           }}
           variant="body1"
         >
-          Claims end January 1st, 2024
+            { /* Claims end January 1st, 2024 */ }
         </Typography>
       )}
       {airdrop_started && (
