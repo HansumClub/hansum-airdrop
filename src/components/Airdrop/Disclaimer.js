@@ -180,7 +180,7 @@ const HansumDisclaimer = () => {
             >
               {
                 // tell them to keep scrolling if not at bottom yet
-                !isAtBottom ? "Keep Scrolling" : "I Agree"
+                !global.window ? "Loading airdrop data..." : (!isAtBottom ? "Keep Scrolling" : "I Agree")
               }
             </Button>
           </Box>
