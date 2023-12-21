@@ -21,7 +21,7 @@
     "airdrop-test": "./merkle-airdrop-cli/bin/run generateRoot --file ./src/data/test-airdrop.json"
   },
   "dependencies": {
-    "@cosmjs/cosmwasm-stargate": "^0.31.0",
+    "@cosmjs/cosmwasm-stargate": "^0.32.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.7.0",

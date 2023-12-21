@@ -26,6 +26,7 @@ import {
   addTokenToKeplr,
 } from "../../utils/hansum";
 import { CosmWasmClient } from "cosmwasm";
+import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
 import HansumDisclaimer from "./Disclaimer";
 
 // Wen airdrop?
@@ -358,8 +359,11 @@ const Airdrop = () => {
       {airdrop_started && (
         <Grid sx={{ py: 10 }} container>
           <Grid item xs={6} sx={{}}>
-            <Typography variant="body2" color="white">
-              Total claimed: {(totalClaimed / 1000).toFixed(1)}K $HANSUM
+            <Typography title={totalClaimed} variant="body2" color="white">
+              Total claimed: {Intl.NumberFormat('en-US', {
+                notation: "compact",
+                maximumFractionDigits: 1
+              }).format(totalClaimed)} $HANSUM
             </Typography>
           </Grid>
           <Grid item xs={6}>
